@@ -10,7 +10,7 @@ export const CONTACT = {
 }
 
 // Update this to your GitHub username if needed.
-export const DEFAULT_GITHUB_USERNAME = 'krish-sharda'
+export const DEFAULT_GITHUB_USERNAME = 'krishsharda'
 
 // GitHub Personal Access Token - stored in code (not recommended for public repos)
 // Better practice: use environment variables or server-side API
@@ -22,7 +22,9 @@ export const GITHUB_TOKEN = ENV_GITHUB_TOKEN && ENV_GITHUB_TOKEN.trim()
 
 // Use authenticated user endpoint instead of username-based endpoint
 // This automatically fetches repos for the token owner
-export const GITHUB_REPOS_ENDPOINT = 'https://api.github.com/user/repos?sort=updated&per_page=100&affiliation=owner'
+export const GITHUB_REPOS_ENDPOINT = (GITHUB_TOKEN && GITHUB_TOKEN.trim())
+  ? 'https://api.github.com/user/repos?sort=updated&per_page=100&affiliation=owner'
+  : `https://api.github.com/users/${encodeURIComponent(DEFAULT_GITHUB_USERNAME)}/repos?sort=updated&per_page=100`
 
 export type QuickProfile = {
   label: string
