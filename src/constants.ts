@@ -143,7 +143,7 @@ export const EXPERIENCES: Experience[] = [
   {
     role: 'Frontend Engineer Intern',
     company: 'MARPU FOUNDATION',
-    period: 'Jun 2024 – Sep 2024',
+    period: 'Jun 2025 – Aug 2025',
     summary:
       'Built accessible React components, optimized bundle size by 28%, and introduced CI checks for Lighthouse performance.',
   },
