@@ -180,5 +180,5 @@ export const SKILLS: string[] = [
   'MongoDB',
   'Scikit-Learn',
   'Git',
-  'ML/Deep Learning'
+  'ML/DL'
 ]
