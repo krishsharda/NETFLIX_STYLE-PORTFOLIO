@@ -76,7 +76,7 @@ export default function App() {
                     <div className="mt-4">
                       <div className="text-xs uppercase tracking-widest text-neutral-400">Profile Summary</div>
                       <p className="mt-2 max-w-2xl text-neutral-300">
-                        I’m a backend-learning software engineer intern who loves turning messy problems into simple, fast solutions. I’ve built and tuned Python APIs, shaving latency and making services more reliable, with clean tests and readable code. I’m comfortable in cloud/devops tooling and enjoy collaborating with designers and PMs to ship useful features. Curious, quick to learn, and happiest when I own a project from idea to production.
+                        Ambitious developer specializing in AI and machine learning with the MERN stack, building smart, reliable apps. Whether crafting smooth user experiences with React or implementing AI-powered features, I prioritize security and performance. I enjoy collaborating, sharing ideas, and turning big challenges into simple, useful solutions. My favorite projects blend technology and creativity—interactive dashboards and recommendation tools that make a real impact in everyday life.
                       </p>
                     </div>
                     <div className="mt-6 flex flex-wrap items-center gap-3">
