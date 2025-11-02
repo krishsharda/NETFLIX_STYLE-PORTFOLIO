@@ -178,8 +178,7 @@ export const SKILLS: string[] = [
   'Google Cloud',
   'TailwindCSS',
   'MongoDB',
-  'Data Analytics',
-  'Machine Learning/Deep Learning',
   'Scikit-Learn',
   'Git',
+  'ML/Deep Learning'
 ]
