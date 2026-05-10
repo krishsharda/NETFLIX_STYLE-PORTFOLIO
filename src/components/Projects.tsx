@@ -1,29 +1,35 @@
-import Carousel from './Carousel'
 import { PROJECTS } from '../constants'
 
 export default function Projects() {
   return (
-    <Carousel>
-      {PROJECTS.map((p) => (
-        <a
-          key={p.id}
-          href={p.href || '#'}
-          target={p.href ? '_blank' : undefined}
-          rel={p.href ? 'noreferrer' : undefined}
-          className="group snap-start w-72 sm:w-80 flex-shrink-0"
-        >
-          <div className="relative h-44 w-full overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-neutral-800 to-neutral-900 shadow-glow">
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-tr from-brand-500/20 via-transparent to-transparent" />
-            <div className="absolute right-2 top-2 rounded bg-white/10 px-2 py-0.5 text-xs text-neutral-200 backdrop-blur">
-              {p.tags?.[0] || 'Project'}
+    <div className="grid gap-5">
+      {PROJECTS.map((project) => (
+        <article key={project.id} className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-glow">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+            <div>
+              <h3 className="text-lg font-semibold text-white">{project.title}</h3>
+              {project.subtitle ? <p className="text-sm text-neutral-400">{project.subtitle}</p> : null}
             </div>
-            <div className="absolute inset-x-0 bottom-0 p-3">
-              <div className="text-base font-semibold">{p.title}</div>
-              {p.subtitle && <div className="text-xs text-neutral-400">{p.subtitle}</div>}
-            </div>
+            {project.tags?.length ? (
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span key={tag} className="rounded-full border border-white/10 bg-black/20 px-2.5 py-1 text-xs text-neutral-200">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            ) : null}
           </div>
-        </a>
+
+          {project.bullets?.length ? (
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-300">
+              {project.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          ) : null}
+        </article>
       ))}
-    </Carousel>
+    </div>
   )
 }

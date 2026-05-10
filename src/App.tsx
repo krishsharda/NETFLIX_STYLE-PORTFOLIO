@@ -1,15 +1,15 @@
 
 import Header from './components/Header'
-import GithubProjects from './components/GithubProjects'
 import ProfileQuickLinks from './components/ProfileQuickLinks'
 import Section from './components/Section'
 import Skills from './components/Skills'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
 import Certifications from './components/Certifications'
+import Education from './components/Education'
 import Contact from './components/Contact'
-import { BRAND_NAME, QuickProfile } from './constants'
-import { QUICK_PROFILES } from './constants'
+import GithubProjects from './components/GithubProjects'
+import { BRAND_NAME, PROFESSIONAL_SUMMARY, QuickProfile, QUICK_PROFILES } from './constants'
 import ProfilePicker from './components/ProfilePicker'
 import { useEffect, useState } from 'react'
 import NetflixIntro from './components/NetflixIntro'
@@ -69,14 +69,14 @@ export default function App() {
                 >
                   <div className="absolute inset-0 bg-black/60 rounded-2xl z-0" />
                   <div className="relative z-10">
-                    <div className="text-sm uppercase tracking-widest text-neutral-400">Welcome{selectedProfile ? `, ${['Recruiter', 'Developer', 'Stalker', 'Adventure'][QUICK_PROFILES.findIndex((p: QuickProfile) => p.label === selectedProfile.label)]}` : ''}</div>
+                    <div className="text-sm uppercase tracking-widest text-neutral-400">Welcome{selectedProfile ? `, ${selectedProfile.label}` : ''}</div>
                     <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold tracking-tight">
                       {BRAND_NAME}
                     </h1>
                     <div className="mt-4">
-                      <div className="text-xs uppercase tracking-widest text-neutral-400">Profile Summary</div>
+                      <div className="text-xs uppercase tracking-widest text-neutral-400">Professional Summary</div>
                       <p className="mt-2 max-w-2xl text-neutral-300">
-                        Ambitious developer specializing in AI and machine learning with the MERN stack, building smart, reliable apps. Whether crafting smooth user experiences with React or implementing AI-powered features, I prioritize security and performance. I enjoy collaborating, sharing ideas, and turning big challenges into simple, useful solutions. My favorite projects blend technology and creativity—interactive dashboards and recommendation tools that make a real impact in everyday life.
+                        {PROFESSIONAL_SUMMARY}
                       </p>
                     </div>
                     <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -99,16 +99,24 @@ export default function App() {
               <Skills />
             </Section>
             {/* Experience */}
-            <Section id="experience" title="Experience" subtitle="Work and internships">
+            <Section id="experience" title="Work Experience" subtitle="Roles and impact">
               <Experience />
             </Section>
-            {/* Certifications */}
-            <Section id="certifications" title="Certifications">
-              <Certifications />
-            </Section>
             {/* Projects */}
-            <Section id="projects" title="Continue Watching" subtitle="Recent projects from GitHub">
+            <Section id="projects" title="Projects" subtitle="Selected AI/GenAI builds">
+              <Projects />
+            </Section>
+            {/* GitHub Projects */}
+            <Section id="github-projects" title="GitHub Projects" subtitle="All repositories from my GitHub profile">
               <GithubProjects />
+            </Section>
+            {/* Education */}
+            <Section id="education" title="Education" subtitle="Academic background">
+              <Education />
+            </Section>
+            {/* Certifications */}
+            <Section id="certifications" title="Certifications" subtitle="Completed learning and simulations">
+              <Certifications />
             </Section>
             {/* Contact */}
             <Section id="contact" title="Contact Me" subtitle="Reach out directly or send a quick note">

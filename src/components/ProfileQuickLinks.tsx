@@ -1,33 +1,30 @@
+import { QUICK_PROFILES, QuickProfile } from '../constants'
 
-import { QUICK_PROFILES } from '../constants';
-
-export default function ProfileQuickLinks({ onSelect }: { onSelect: (p: typeof QUICK_PROFILES[number]) => void }) {
+export default function ProfileQuickLinks({ onSelect }: { onSelect?: (p: QuickProfile) => void }) {
   return (
-    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="mt-20 md:mt-24">
-        <div className="flex items-center gap-3 text-neutral-400">
-          <span className="h-2 w-2 rounded-full bg-brand-500" />
-          <span className="text-sm uppercase tracking-widest">Quick Profiles</span>
-        </div>
-
-        <div className="mt-3 overflow-x-auto no-scrollbar">
-          <div className="flex gap-3 min-w-full">
-            {QUICK_PROFILES.map((p) => (
-              <div
-                key={p.label}
-                className="group relative flex-shrink-0 rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur transition hover:border-white/20 hover:bg-white/10 cursor-pointer"
-                onClick={() => onSelect(p)}
-              >
-                <img src={p.avatarUrl} alt={p.label} className="w-12 h-12 object-cover rounded-full mb-2" />
-                <div className="text-sm font-semibold">{p.label}</div>
-                {p.desc && (
-                  <div className="text-xs text-neutral-400 group-hover:text-neutral-300">{p.desc}</div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
+    <div className="mt-8 w-full px-0 text-left">
+      <div className="text-xs uppercase tracking-widest text-neutral-400 pl-[5%]">Profiles</div>
+      <div className="mt-3 flex flex-wrap justify-start gap-5 pl-[5%]">
+        {QUICK_PROFILES.slice(0, 4).map((p: QuickProfile) => (
+          <button
+            key={p.label}
+            onClick={() => onSelect?.(p)}
+            className="group flex w-28 flex-col items-center gap-2.5 text-center transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03]"
+            aria-label={`Select ${p.label} profile`}
+          >
+            <span className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-white/10 ring-1 ring-white/10 transition duration-300 group-hover:scale-105 group-hover:ring-brand-500 group-hover:shadow-[0_0_24px_rgba(229,9,20,0.35)] sm:h-24 sm:w-24">
+              <img
+                src={p.avatarUrl}
+                alt={`${p.label} profile`}
+                className="h-full w-full object-cover"
+              />
+            </span>
+            <span className="text-xs sm:text-sm font-medium text-neutral-300 group-hover:text-white">
+              {p.label}
+            </span>
+          </button>
+        ))}
       </div>
     </div>
-  );
+  )
 }

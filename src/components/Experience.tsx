@@ -2,19 +2,26 @@ import { EXPERIENCES } from '../constants'
 
 export default function Experience() {
   return (
-    <ol className="relative border-s border-white/10">
+    <div className="space-y-6">
       {EXPERIENCES.map((e, idx) => (
-        <li key={e.role + idx} className="mb-10 ms-6">
-          <span className="absolute -start-3 flex h-6 w-6 items-center justify-center rounded-full bg-brand-500/80 ring-4 ring-neutral-950">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-              <circle cx="12" cy="12" r="6" />
-            </svg>
-          </span>
-          <h3 className="text-lg font-semibold">{e.role}</h3>
-          <p className="text-sm text-neutral-400">{e.company} • {e.period}</p>
-          <p className="mt-2 text-neutral-300">{e.summary}</p>
-        </li>
+        <article key={e.role + idx} className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-glow">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h3 className="text-lg font-semibold text-white">{e.role}</h3>
+              <p className="text-sm text-neutral-400">{e.company}</p>
+            </div>
+            <p className="text-sm font-medium text-neutral-300">{e.period}</p>
+          </div>
+          <p className="mt-3 text-neutral-300">{e.summary}</p>
+          {e.bullets?.length ? (
+            <ul className="mt-4 list-disc space-y-2 pl-5 text-neutral-300">
+              {e.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          ) : null}
+        </article>
       ))}
-    </ol>
+    </div>
   )
 }

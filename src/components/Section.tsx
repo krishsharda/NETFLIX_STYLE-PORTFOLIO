@@ -1,38 +1,28 @@
-import { ReactNode } from 'react'
+import React from 'react'
 
 export default function Section({
   id,
   title,
-  children,
   subtitle,
   bgClassName,
   overlayClassName,
+  children,
 }: {
-  id: string
-  title: ReactNode
+  id?: string
+  title?: string
   subtitle?: string
-  children: ReactNode
   bgClassName?: string
   overlayClassName?: string
+  children?: React.ReactNode
 }) {
-  const hasBg = Boolean(bgClassName && bgClassName.trim().length > 0)
   return (
-    <section id={id} className={`section-strip scroll-mt-24 py-12 sm:py-16 lg:py-20 ${hasBg ? `relative ${bgClassName}` : ''}`}>
-      {hasBg && (
-        <div
-          className={`absolute inset-0 ${overlayClassName ? overlayClassName : 'bg-black/60'} pointer-events-none`}
-          aria-hidden="true"
-        />
-      )}
-      <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${hasBg ? 'relative z-10' : ''}`}>
-        <div className="mb-6 flex items-end justify-between">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">{title}</h2>
-            {subtitle && <p className="mt-1 text-neutral-400">{subtitle}</p>}
-          </div>
-          <div className="hidden md:block h-px flex-1 ml-6 bg-gradient-to-r from-white/10 to-transparent" />
+    <section id={id} className={`py-12 ${bgClassName || ''}`}>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className={`relative ${overlayClassName || ''} p-6 rounded-2xl`}>
+          {title && <h2 className="text-2xl font-bold text-white">{title}</h2>}
+          {subtitle && <p className="text-sm text-neutral-400 mt-1">{subtitle}</p>}
+          <div className="mt-6">{children}</div>
         </div>
-        {children}
       </div>
     </section>
   )
