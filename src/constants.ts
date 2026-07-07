@@ -31,7 +31,7 @@ export type QuickProfile = {
 }
 
 export const PROFESSIONAL_SUMMARY =
-  'Aspiring Generative AI engineer with practical experience in voice assistants, retrieval systems, and workflow automation tools. I enjoy turning ideas into simple, reliable solutions using Python, APIs, and modern development tools. I learn quickly, work well with real-world problems, and like building products that are genuinely useful.'
+  'AI Engineer building production-ready Generative AI applications, voice agents, LLM-powered systems, RAG pipelines, FastAPI services, and cloud-deployed AI solutions. Experienced in integrating modern LLM APIs, multimodal vision models, real-time speech and computer-vision pipelines, tool/function calling, vector databases, and scalable backend architectures deployed on Vercel and Google Cloud Run.'
 
 export const QUICK_PROFILES: QuickProfile[] = [
   {
@@ -71,24 +71,40 @@ export type SkillGroup = {
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    category: 'Languages',
-    items: ['Python', 'SQL', 'C++'],
+    category: 'Programming Languages',
+    items: ['Python', 'JavaScript', 'SQL', 'C++'],
   },
   {
-    category: 'Libraries & Frameworks',
-    items: ['NumPy', 'Pandas', 'Matplotlib', 'Seaborn', 'Scikit-learn', 'FastAPI', 'LangChain'],
+    category: 'Generative AI & LLM APIs',
+    items: ['OpenAI API (GPT-4o)', 'Google Gemini API', 'Anthropic Claude API', 'Groq API'],
   },
   {
-    category: 'AI / GenAI Tools',
-    items: ['OpenAI API', 'Groq API', 'n8n', 'ElevenLabs', 'Whisper', 'Claude', 'ChatGPT', 'Prompt Engineering', 'RAG', 'NLP'],
+    category: 'GenAI Tech Stack',
+    items: ['Multimodal AI (Vision)', 'Image Generation', 'Upstash Vector', 'Streaming Responses', 'Web Speech API'],
   },
   {
-    category: 'Platforms',
-    items: ['Jupyter Notebook', 'VS Code', 'Google Colab'],
+    category: 'Voice AI',
+    items: ['ElevenLabs Conversational AI', 'OpenAI Whisper', 'Real-time STT → LLM → TTS Pipelines', 'Streaming Audio'],
   },
   {
-    category: 'Infrastructure & Tools',
-    items: ['Git', 'Docker', 'Google Cloud', 'Firebase', 'REST API', 'Microservices', 'CI/CD', 'Vector DB (FAISS)'],
+    category: 'Agents & Tool Use',
+    items: ['Function Calling', 'Tool Calling', 'Agentic Workflows', 'Multi-turn Conversation', 'n8n Automation'],
+  },
+  {
+    category: 'Retrieval',
+    items: ['Retrieval-Augmented Generation (RAG)', 'LangChain', 'FAISS', 'Embeddings', 'Document Chunking'],
+  },
+  {
+    category: 'Prompt Engineering',
+    items: ['System Prompt Design', 'Few-shot Prompting', 'Structured JSON Outputs'],
+  },
+  {
+    category: 'Cloud',
+    items: ['Google Cloud Run', 'Vercel', 'Firebase', 'Firestore', 'Firebase Authentication', 'Firestore Security Rules', 'Docker'],
+  },
+  {
+    category: 'Data & ML',
+    items: ['NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib'],
   },
 ]
 
@@ -104,60 +120,30 @@ export type Certification = {
 
 export const CERTIFICATIONS: Certification[] = [
   {
-    name: 'Prompt Engineering',
-    issuer: 'Tayana Solutions',
-    issued: 'Jan 2026',
-    credentialId: 'ORN20266K0CVVRPDR',
-    url: '/certificates/prompt-engineering.pdf',
-    imageUrl: 'https://image.pitchbook.com/Yhl1q5nDmLxPFyIIHccfTrG2DgX1613482347775_200x200',
-  },
-  {
     name: 'RAG System Architecture – Implementation',
     issuer: 'Tayana Solutions',
-    issued: 'March 24, 2026',
-    credentialId: 'ORN2026GXQNOATEBU',
+    issued: 'March 2026',
     url: '/certificates/rag-system-architecture.pdf',
     imageUrl: 'https://image.pitchbook.com/Yhl1q5nDmLxPFyIIHccfTrG2DgX1613482347775_200x200',
   },
   {
-    name: 'AWS - Solutions Architecture Job Simulation',
-    issuer: 'Amazon',
-    issued: 'Oct 2025',
-    credentialId: 'taMzACPyDeD7H9D34',
-    url: 'https://www.theforage.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_icGdd86zKheeZvNjk_1759406898865_completion_certificate.pdf',
+    name: 'Prompt Engineering',
+    issuer: 'Tayana Solutions',
+    issued: 'February 2026',
+    url: '/certificates/prompt-engineering.pdf',
+    imageUrl: 'https://image.pitchbook.com/Yhl1q5nDmLxPFyIIHccfTrG2DgX1613482347775_200x200',
+  },
+  {
+    name: 'Software Engineering Job Simulation',
+    issuer: 'Skyscanner',
+    issued: 'July 2025',
     imageUrl: 'https://www.pngplay.com/wp-content/uploads/3/Amazon-Web-Services-AWS-Logo-Transparent-PNG.png',
   },
   {
-    name: 'Walmart USA - Advanced Software Engineering Job Simulation',
-    issuer: 'Walmart',
-    issued: 'Oct 2025',
-    credentialId: 'bwJRXQTWCTEmunkER',
-    url: 'https://www.theforage.com/completion-certificates/prBZoAihniNijyD6d/oX6f9BbCL9kJDJzfg_prBZoAihniNijyD6d_icGdd86zKheeZvNjk_1759406547933_completion_certificate.pdf',
-    imageUrl: 'https://1000logos.net/wp-content/uploads/2017/05/Walmart-Logo.png',
-  },
-  {
-    name: 'Introduction to Transformer-Based Natural Language Processing',
+    name: 'Intro to Natural Language Processing',
     issuer: 'NVIDIA',
-    issued: 'Jan 2025',
-    credentialId: 'He2KfYSaRj28w6FgPx1',
-    url: 'https://learn.nvidia.com/certificates?id=ol3oo-CARPKTv7BNuSkCuA',
+    issued: 'January 2025',
     imageUrl: 'https://cloudfront-us-east-2.images.arcpublishing.com/reuters/KF4I2HVIS5OOJJSWS5G2D6PFXQ.jpg',
-  },
-  {
-    name: 'Skyscanner - Software Engineering Job Simulation',
-    issuer: 'Forage',
-    issued: 'Jul 2025',
-    credentialId: 'gga4TGon9tdMr4QMz',
-    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/skoQmxqhtgWmKv2pm/p3xGFkpdot5H8NBih_skoQmxqhtgWmKv2pm_EL5bfFiNJwWP3buTP_1751882707092_completion_certificate.pdf',
-    imageUrl: 'http://iconwerk.com/images/bildschirmfoto%202022-10-30%20um%20153028_2x.png?crc=396208396',
-  },
-  {
-    name: 'Quantium - Data Analytics Job Simulation',
-    issuer: 'Quantium',
-    issued: 'May 2025',
-    credentialId: 'LycrH2mDykBzvbbeT',
-    url: 'https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/32A6DqtsbF7LbKdcq/NkaC7knWtjSbi6aYv_32A6DqtsbF7LbKdcq_icGdd86zKheeZvNjk_1746956229658_completion_certificate.pdf',
-    imageUrl: 'https://quantium.com/wp-content/uploads/2021/06/Quantium-Stacked-150ppi.png',
   },
 ]
 
@@ -173,24 +159,24 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     id: 'p1',
-    title: 'JARVIS — Multi-Modal AI Support Agent',
-    subtitle: 'Voice + RAG + LLM',
-    tags: ['Groq API', 'ElevenLabs', 'FAISS', 'LangChain'],
+    title: 'NEO — Agentic Voice AI Assistant',
+    subtitle: 'Voice + RAG + Tool Calling',
+    tags: ['OpenAI GPT-4o', 'ElevenLabs', 'Upstash Vector', 'React'],
     bullets: [
-      'Built a real-time voice AI chatbot using Groq API for ultra-low-latency LLM responses and ElevenLabs for natural-sounding TTS output, achieving sub-second end-to-end response latency.',
-      'Built a RAG pipeline using FAISS + LangChain over a 500-document knowledge base, reducing hallucination rate by ~60% and cutting irrelevant responses from 35% to under 8%.',
-      'Engineered a modular Python architecture supporting multi-turn dialogue with CI/CD-ready structure, enabling rapid iteration and production-grade reliability.',
+      'Built a voice-enabled agentic AI assistant in React using the OpenAI API (GPT-4o) with tool/function calling, streaming responses, and vision support; deployed on Vercel with Node.js serverless functions.',
+      'Engineered a RAG pipeline where uploaded documents are chunked, embedded, and indexed in Upstash Vector, then retrieved at answer time through a dedicated knowledge-base search tool.',
+      'Integrated agentic tools for web search, live news, URL reading, and image generation, plus a real-time voice loop combining Web Speech API (STT) with ElevenLabs TTS.',
     ],
     href: '#',
   },
   {
     id: 'p2',
-    title: 'Voice Agentic AI System',
-    subtitle: 'Production voice AI platform',
-    tags: ['Gemini', 'ChatGPT', 'REST API', 'Microservices'],
+    title: 'Hand Gesture Calculator',
+    subtitle: 'Real-time computer vision',
+    tags: ['MediaPipe Hands', 'JavaScript', 'Browser-only', 'Vercel'],
     bullets: [
-      'Developed a production-grade voice AI agent with Gemini/ChatGPT as the reasoning engine, dynamically resolving 200+ user query types from a structured knowledge base via REST API.',
-      'Implemented full STT/TTS integration and multi-turn dialogue handling, suitable for real-world customer-facing deployment with microservices architecture.',
+      'Built a browser-based calculator that performs arithmetic from hand gestures, using MediaPipe Hands for real-time, fully client-side hand tracking with the camera feed processed on-device for privacy.',
+      'Engineered a gesture-to-calculator state machine (finger counting for operands, distinct poses for operators, hold-to-confirm) and split the pure counting/computation logic into a DOM-free, unit-tested module; deployed as a static site on Vercel.',
     ],
     href: '#',
   },
@@ -206,15 +192,16 @@ export type Experience = {
 
 export const EXPERIENCES: Experience[] = [
   {
-    role: 'AI Engineer Intern',
+    role: 'AI Engineer',
     company: 'Amrera Great Solution Pvt. Ltd., Indore',
     period: 'February 2026 – Present',
-    summary: 'Designed and deployed AI-powered employee onboarding, knowledge retrieval, and conversational automation systems.',
+    summary: 'Designed and deployed LLM-powered employee onboarding, knowledge retrieval, and streaming voice AI systems on Google Cloud Run.',
     bullets: [
-      'Designed and deployed an AI-powered employee onboarding module using LLM chatbots and voice agents, enabling self-serve knowledge retrieval and reducing manual HR dependency by ~35%.',
-      'Built a Firebase-backed company knowledge base integrated with a voice agentic AI system, allowing customers to query structured business data in real time via natural language REST API endpoints.',
-      'Deployed 3 microservices on Google Cloud Run handling 500+ daily API requests, achieving 99.8% uptime and reducing average response latency by 40% vs. prior monolithic architecture.',
-      'Engineered end-to-end STT → LLM → TTS pipelines (Whisper + Gemini/ChatGPT + ElevenLabs), delivering a fully functional, human-like conversational AI product ready for production deployment.',
+      'Designed and deployed an LLM-powered employee onboarding assistant integrating text and voice interaction over an internal company knowledge base, enabling self-serve information retrieval for HR workflows.',
+      'Built a Firestore-backed knowledge system exposed through REST APIs and connected it to the voice agent via LLM tool/function calling for structured business-data retrieval in natural language.',
+      'Built and deployed Dockerized FastAPI microservices on Google Cloud Run to serve AI backend services.',
+      'Implemented an end-to-end streaming voice pipeline (Whisper STT → Gemini/GPT-4o → ElevenLabs TTS) with multi-turn conversational context handling.',
+      'Secured external AI APIs behind a backend proxy architecture and protected application data with Firebase Security Rules.',
     ],
   },
 ]
@@ -233,14 +220,7 @@ export const EDUCATION: Education[] = [
     field: 'AI & Feature Engineering',
     institution: 'Prestige Institute of Management and Research, Indore',
     location: 'Indore, Madhya Pradesh',
-    period: 'August 2024 – Present',
-  },
-  {
-    degree: 'Higher Secondary Certificate (HSC) — Class XII, Commerce | Score: 79.6%',
-    field: 'Commerce',
-    institution: 'Kendriya Vidyalaya (KV)',
-    location: 'CBSE',
-    period: 'March 2022 – April 2024',
+    period: 'August 2024 – 2027',
   },
 ]
 

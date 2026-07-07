@@ -92,18 +92,18 @@ export default function App() {
             <Section
               id="skills"
               title="Skills"
-              subtitle="Key technologies I work with"
+              subtitle="Core tools across AI, backend, and data"
               bgClassName="bg-skills-bg bg-cover bg-center bg-no-repeat bg-fixed"
               overlayClassName="bg-black/30"
             >
               <Skills />
             </Section>
             {/* Experience */}
-            <Section id="experience" title="Work Experience" subtitle="Roles and impact">
+            <Section id="experience" title="Work Experience" subtitle="Current role and impact">
               <Experience />
             </Section>
             {/* Projects */}
-            <Section id="projects" title="Projects" subtitle="Selected AI/GenAI builds">
+            <Section id="projects" title="Projects" subtitle="Featured AI and computer-vision builds">
               <Projects />
             </Section>
             {/* GitHub Projects */}
@@ -111,11 +111,11 @@ export default function App() {
               <GithubProjects />
             </Section>
             {/* Education */}
-            <Section id="education" title="Education" subtitle="Academic background">
+            <Section id="education" title="Education" subtitle="Current academic background">
               <Education />
             </Section>
             {/* Certifications */}
-            <Section id="certifications" title="Certifications" subtitle="Completed learning and simulations">
+            <Section id="certifications" title="Certifications" subtitle="Resume certifications">
               <Certifications />
             </Section>
             {/* Contact */}
