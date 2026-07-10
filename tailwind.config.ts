@@ -22,7 +22,7 @@ const config: Config = {
         glow: '0 0 0 1px rgba(255,255,255,0.08), 0 10px 30px rgba(0,0,0,0.6)',
       },
       backgroundImage: {
-        'onepiece-bg': "url('/onepiece-bg.jpg')",
+        'onepiece-bg': "url('/image-1783673638637.png')",
         'quickprofile-bg': "url('/quickprofile-img.jpg')",
         'skills-bg': "url('/skills-bg.jpg')",
         // You can add more backgrounds if needed

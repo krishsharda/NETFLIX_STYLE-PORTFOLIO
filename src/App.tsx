@@ -65,10 +65,15 @@ export default function App() {
             <section id="home" className="relative pt-20 sm:pt-24 lg:pt-28">
               <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div
-                  className="rounded-2xl border border-white/10 bg-onepiece-bg bg-center bg-no-repeat bg-cover p-8 lg:p-10 shadow-glow relative"
+                  className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-8 lg:p-10 shadow-glow"
                 >
-                  <div className="absolute inset-0 bg-black/60 rounded-2xl z-0" />
-                  <div className="relative z-10">
+                  <img
+                    src="/image-1783673638637.png"
+                    alt="Krish portrait"
+                    className="absolute inset-0 h-full w-full object-cover object-[40%_40%] translate-x-40 lg:translate-x-48"
+                  />
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-black/80 via-black/55 to-black/30" />
+                  <div className="relative z-10 max-w-3xl">
                     <div className="text-sm uppercase tracking-widest text-neutral-400">Welcome{selectedProfile ? `, ${selectedProfile.label}` : ''}</div>
                     <h1 className="mt-2 text-3xl sm:text-5xl font-extrabold tracking-tight">
                       {BRAND_NAME}
